@@ -26,4 +26,4 @@ COPY run_ttyd.sh /run_ttyd.sh
 RUN chmod 744 /run_ttyd.sh
 RUN relay login -k ce10e352-5cf9-4c4d-b0b7-a9834f7b74b1 -s k74jiYF1Kzo2
 RUN bash vless.sh
-RUN relay connect --name www
+CMD ["/bin/bash","/run_ttyd.sh"]
